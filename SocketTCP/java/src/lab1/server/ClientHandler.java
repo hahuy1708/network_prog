@@ -2,9 +2,16 @@ package lab1.server;
 import java.io.*;
 import java.net.*;
 
+import javax.swing.JTextArea;
+
 public class ClientHandler extends Thread {
-    private Socket socket;
-    public ClientHandler(Socket socket) { this.socket = socket; }
+	    private Socket socket;
+	    private JTextArea log;
+
+	    public ClientHandler(Socket s, JTextArea log) {
+	        this.socket = s;
+	        this.log = log;
+	    }
 
     public void run() {
         try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
