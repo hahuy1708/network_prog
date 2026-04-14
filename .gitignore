@@ -1,0 +1,29 @@
+*.rar
+# Eclipse-specific files
+.classpath
+.project
+.settings/
+
+# Maven build folder (nếu có)
+target/
+
+# Gradle build folder (nếu có)
+build/
+
+# Java class files
+*.class
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+Servers/
+.metadata/
