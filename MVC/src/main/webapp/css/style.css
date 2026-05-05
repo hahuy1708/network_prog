@@ -134,6 +134,12 @@ a:hover {
     margin: 8px 0 14px;
 }
 
+.success-msg {
+    color: #0a7a2a;
+    font-weight: 700;
+    margin: 8px 0 14px;
+}
+
 @media (max-width: 700px) {
     body {
         padding: 14px;

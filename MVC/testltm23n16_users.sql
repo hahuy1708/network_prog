@@ -1,8 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `dulieu3` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `dulieu3`;
 -- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
--- Host: localhost    Database: dulieu3
+-- Host: localhost    Database: testltm23n16
 -- ------------------------------------------------------
 -- Server version	9.4.0
 
@@ -18,32 +16,6 @@ USE `dulieu3`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sv`
---
-
-DROP TABLE IF EXISTS `sv`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `sv` (
-  `ma_sv` varchar(10) NOT NULL,
-  `ho_ten` varchar(50) DEFAULT NULL,
-  `lop` varchar(20) DEFAULT NULL,
-  `diem_tb` float DEFAULT NULL,
-  PRIMARY KEY (`ma_sv`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `sv`
---
-
-LOCK TABLES `sv` WRITE;
-/*!40000 ALTER TABLE `sv` DISABLE KEYS */;
-INSERT INTO `sv` VALUES ('SV002','Tran Thi Hoa','CNTT01',7.2),('SV003','Le Van Nam','CNTT02',9),('SV004','Pham Minh Duc','CNTT02',6.8),('SV404','Pham Cong THang','23T_DT1',8.9);
-/*!40000 ALTER TABLE `sv` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -53,6 +25,9 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) DEFAULT NULL,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) DEFAULT NULL,
+  `roles` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -63,7 +38,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','123'),('huy','456');
+INSERT INTO `users` VALUES ('admin','123','Adminn1','User','admin'),('hahuy','456','ha','huy','user'),('Hhuy','456','ha','huy','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-21 14:47:33
+-- Dump completed on 2026-05-05 14:00:40

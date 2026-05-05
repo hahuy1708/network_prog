@@ -37,7 +37,7 @@ public class CheckLoginServlet extends HttpServlet {
         if (isValid) {
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
-            response.sendRedirect(request.getContextPath() + "/welcom.jsp");
+            response.sendRedirect(request.getContextPath() + "/UserServlet?action=search");
         } else {
             response.sendRedirect(request.getContextPath() + "/login.jsp?error=1");
         }

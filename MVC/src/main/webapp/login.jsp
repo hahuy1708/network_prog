@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-    String error = request.getParameter("error");
+	String error = request.getParameter("error");
+	String registered = request.getParameter("registered");
 %>
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,16 @@
 		<%
 			if ("1".equals(error)) {
 		%>
-			<p class="error-msg">Sai tên đăng nhập hoặc mật khẩu.</p>
+			<p class="error-msg">Invalid username and password</p>
+			<div class="action-row">
+				<a href="<%= request.getContextPath() %>/login.jsp">Try Again</a>
+				<a href="<%= request.getContextPath() %>/RegisterServlet">Register</a>
+			</div>
+		<%
+			}
+			if ("1".equals(registered)) {
+		%>
+			<p class="success-msg">Registration successful. Please login.</p>
 		<%
 			}
 		%>
