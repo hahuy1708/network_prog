@@ -27,3 +27,6 @@ Thumbs.db
 
 Servers/
 .metadata/
+
+*.rar
+*.docx
