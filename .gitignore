@@ -21,6 +21,9 @@ build/
 *.bak
 *.swp
 
+# dotenv
+.env
+
 # OS-specific files
 .DS_Store
 Thumbs.db
